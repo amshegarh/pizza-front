@@ -1,0 +1,13 @@
+.postOrder input {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.postOrder label {
+    display: block;
+    margin-top: 15px;
+}
+
+.postOrderTable td {
+    width: 150px;
+}

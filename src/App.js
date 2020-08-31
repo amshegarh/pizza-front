@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Navbar from "./navbar";
+import Content from './content';
+
+import './css/default.css';
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentPage: "Homepage",
+            preferredCurrency: "USD",
+            cart: [],
+            menuAmounts: {}
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <div id="wrapper">
+                    <Navbar
+                        appState={this.state} setAppState={state => this.setState(state)}/>
+                    <div id="page" className="container">
+                        <Content appState={this.state} setAppState={state => this.setState(state)}/>
+                    </div>
+                </div>
+                <div id="copyright" className="container">
+                    <p>by <a href="https://github.com/amshegarh/">amshegarh</a></p>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;

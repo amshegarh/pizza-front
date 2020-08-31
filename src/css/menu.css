@@ -1,0 +1,35 @@
+.pizzasBlock {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+.pizzasBlock div:hover {
+    background-color: #f7f7f7;
+}
+
+.pizzasBlock h4, .pizzasBlock p {
+    margin: initial;
+}
+
+.pizzasBlock img {
+    width: 30%;
+    float: left;
+    padding: 0 7px 7px 0;
+}
+
+.pizzasCurrencySelect {
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+.pizzasCurrencySelect select {
+    margin-left: 20px;
+    width: 100px
+}
+
+.pizzaAmountInput {
+    padding: 0.50em 0 0.50em 3px;
+    width:50px
+}
